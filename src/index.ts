@@ -52,3 +52,27 @@ export default {
   swapCase,
   deepClone,
 };
+
+export {
+  mobileCheck,
+  idCardCheck,
+  emailCheck,
+  isAlpha,
+  isAlphaSpace,
+  isAlphanumeric,
+  isAlphanumericSpace,
+  isNumeric,
+  isDecimal,
+  isNegativeDecimal,
+  isPositiveDecimal,
+  isInteger,
+  isPositiveInteger,
+  isNegativeInteger,
+  isNumericSpace,
+  titleCase,
+  camelCase,
+  parseTime,
+  uncapitalize,
+  swapCase,
+  deepClone,
+}

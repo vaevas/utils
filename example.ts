@@ -2,7 +2,7 @@ const email = 'test@example.com';
 /**
  * 单个导入使用
  */
-import { emailCheck } from './validates/index';
+import { emailCheck } from './src/validates/index';
 if (emailCheck(email)) {
   console.log('email is valid');
 } else {
@@ -11,7 +11,7 @@ if (emailCheck(email)) {
 /**
  * 整个导入
  */
-import validate from './index';
+import validate from './src/index';
 if (validate.emailCheck(email)) {
   console.log('email is valid');
 } else {

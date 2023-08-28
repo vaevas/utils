@@ -1,6 +1,6 @@
 # 一个前端工具包
 
-[![npm version](https://badge.fury.io/js/vaevas-utils.svg)](https://badge.fury.io/js/vaevas-utils)
+[![npm version](https://img.shields.io/npm/v/vaevas-utils.svg)](https://badge.fury.io/js/vaevas-utils)
 
 整合了一些前端开发过程中使用的一些工具函数，支持单个导入以及全部导入
 
@@ -31,7 +31,7 @@ const email = 'test@example.com';
 /**
  * 单个导入使用
  */
-import { emailCheck } from './validates/index.js';
+import { emailCheck } from 'vaevas-utils/dist';
 if (emailCheck(email)) {
   console.log('email is valid');
 } else {
@@ -40,7 +40,7 @@ if (emailCheck(email)) {
 /**
  * 整个导入
  */
-import validate from './index.js';
+import validate from 'vaevas-utils/dist';
 if (validate.emailCheck(email)) {
   console.log('email is valid');
 } else {

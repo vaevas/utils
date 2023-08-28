@@ -2,6 +2,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import resolve from '@rollup/plugin-node-resolve'; // 依赖引用插件
 import commonjs from '@rollup/plugin-commonjs'; // commonjs模块转换插件
+import terser from '@rollup/plugin-terser';
 import ts from 'rollup-plugin-typescript2';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -19,7 +20,7 @@ const tsPlugin = ts({
 // 基础配置
 const commonConf = {
   input: getPath('./src/index.ts'),
-  plugins: [resolve(extensions), commonjs(), tsPlugin],
+  plugins: [resolve(extensions), commonjs(), tsPlugin, terser()],
 };
 // 需要导出的模块类型
 const outputMap = [
