@@ -7,7 +7,7 @@
   "module": "./lib/index.esm.js",
   "types": "./lib/types/index.d.ts",
   "files": [
-    "lib"
+    "lib/*"
   ],
   "scripts": {
     "dev": "rollup -w -c",
