@@ -3,7 +3,7 @@ import { mobileCheck, idCardCheck, emailCheck, isAlpha, isAlphaSpace, isAlphanum
 // 格式化函数
 import { titleCase, camelCase, parseTime, uncapitalize, swapCase, } from './formats/index';
 // 工具函数
-import { deepClone } from './tools/index';
+import { deepClone, objToFormData, removeEmptyObj } from './tools/index';
 export default {
     mobileCheck,
     idCardCheck,
@@ -26,5 +26,7 @@ export default {
     uncapitalize,
     swapCase,
     deepClone,
+    objToFormData,
+    removeEmptyObj
 };
-export { mobileCheck, idCardCheck, emailCheck, isAlpha, isAlphaSpace, isAlphanumeric, isAlphanumericSpace, isNumeric, isDecimal, isNegativeDecimal, isPositiveDecimal, isInteger, isPositiveInteger, isNegativeInteger, isNumericSpace, titleCase, camelCase, parseTime, uncapitalize, swapCase, deepClone, };
+export { mobileCheck, idCardCheck, emailCheck, isAlpha, isAlphaSpace, isAlphanumeric, isAlphanumericSpace, isNumeric, isDecimal, isNegativeDecimal, isPositiveDecimal, isInteger, isPositiveInteger, isNegativeInteger, isNumericSpace, titleCase, camelCase, parseTime, uncapitalize, swapCase, deepClone, objToFormData, removeEmptyObj };

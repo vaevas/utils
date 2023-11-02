@@ -27,7 +27,7 @@ import {
 } from './formats/index';
 
 // 工具函数
-import { deepClone } from './tools/index';
+import { deepClone, objToFormData, removeEmptyObj } from './tools/index';
 
 export default {
   mobileCheck,
@@ -51,6 +51,8 @@ export default {
   uncapitalize,
   swapCase,
   deepClone,
+  objToFormData,
+  removeEmptyObj
 };
 
 export {
@@ -75,4 +77,6 @@ export {
   uncapitalize,
   swapCase,
   deepClone,
+  objToFormData,
+  removeEmptyObj
 }

@@ -50,4 +50,30 @@ const deepClone = (obj: any) => {
   return result;
 };
 
-export { deepClone };
+/**
+ * 将普通对象转为 formData 格式
+ *
+ */
+const objToFormData = (obj: any) => {
+  if (obj === null || typeof obj !== 'object') {
+    throw new Error('objToFormData: obj must be an object');
+  }
+  const formData = new FormData();
+  for (const key in obj) {
+    formData.append(key, obj[key]);
+  }
+  return formData;
+}
+
+/**
+ * 去除对象中的空属性
+ */
+const removeEmptyObj = (obj: any) => {
+  for (let key in obj) {
+    if (obj[key] === null || obj[key] === undefined || obj[key] === '') {
+      delete obj[key];
+    }
+  }
+  return obj;
+}
+export { deepClone, objToFormData, removeEmptyObj };
