@@ -87,5 +87,11 @@ const parseTime = (time?: Date | string | number, pattern?: string) => {
   });
   return time_str;
 };
-
-export { titleCase, camelCase, parseTime, uncapitalize, swapCase };
+/**
+ * 千位分隔
+ */
+ const formatNumber = (value: number|string) => {
+  if (!value) return value
+  return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+};
+export { titleCase, camelCase, parseTime, uncapitalize, swapCase, formatNumber };

@@ -24,4 +24,8 @@ declare const camelCase: (str: string) => string;
  * @returns
  */
 declare const parseTime: (time?: Date | string | number, pattern?: string) => string | null;
-export { titleCase, camelCase, parseTime, uncapitalize, swapCase };
+/**
+ * 千位分隔
+ */
+declare const formatNumber: (value: number | string) => string | number;
+export { titleCase, camelCase, parseTime, uncapitalize, swapCase, formatNumber };

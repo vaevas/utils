@@ -52,7 +52,6 @@ const deepClone = (obj: any) => {
 
 /**
  * 将普通对象转为 formData 格式
- *
  */
 const objToFormData = (obj: any) => {
   if (obj === null || typeof obj !== 'object') {
@@ -76,4 +75,17 @@ const removeEmptyObj = (obj: any) => {
   }
   return obj;
 }
-export { deepClone, objToFormData, removeEmptyObj };
+
+/**
+ * 根据某个key直接分组
+ */
+const groupBy = <T>(array: T[], key: keyof T): { [key: string]: T[] } =>
+  array.reduce((result:any, item) => {
+    const groupKey = String(item[key]) ;
+    if (!result[groupKey]) {
+      result[groupKey] = [];
+    }
+    result[groupKey].push(item);
+    return result;
+  }, {});
+export { deepClone, objToFormData, removeEmptyObj, groupBy };
