@@ -1,6 +1,6 @@
 {
   "name": "vaevas-utils",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "一个前端工具包",
   "type": "module",
   "main": "dist/index.cjs.js",
